@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href='static/css/next.css'/>
+
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="/intro">Introduction</a>
+        <a href="/signup">Back</a>
+
+    </div>
+    <div class="form-container">
+        <h1>User Details Form</h1>
+        <form method="POST" action="/next">
+            <!-- Your form elements here... -->
+             <!--bio-->
+        <div>
+            <label>Bio</label>
+            <div class="input-group">
+                <input type="text"  name="bio" maxlength="280">
+            </div>
+        </div>
+
+        <!--rating-->
+        <div>
+            <label>Rating</label>
+            <div class="input-group">
+                <input type="number"  name="rating" min='1' max='5'>
+            </div>
+        </div>
+
+        <!--location-->
+        <div>
+            <label>Location</label>
+            <div class="input-group">
+                <input type="text"  name="location" maxlength="280">
+            </div>
+        </div>
+
+        <!--music_type-->
+        <div>
+            <label>Music type</label>
+            <div class="input-group">
+                <input type="text"  name="music_type" maxlength="280">
+            </div>
+        </div>
+
+        <!--musician_type-->
+        <div>
+            <label>Artist</label>
+            <div class="input-group">
+                <input type="radio" id="vehicle1" name="artist" value="Solo-artist">
+                <label for="vehicle1"> Solo artist</label><br>
+                <input type="radio" id="vehicle2" name="artist" value="Band/Team">
+                <label for="vehicle2">Band/Team</label><br>
+            </div>
+        </div>
+
+         <!--Image-->
+        <div>
+           <label>Image Link</label>
+            <div class="input-group">
+                <input type="text"  name="link">
+            </div>
+        </div>
+
+        <!--insta link-->
+        <div>
+           <label>Insta Link</label>
+            <div class="input-group">
+                <input type="text"  name="insta_link">
+            </div>
+        </div>
+
+
+        <!-- Button -->
+        <div>
+            <input type="submit"/>
+
+        </div>
+
+        </form>
+    </div>
+    
+    
+</body>
+</html>

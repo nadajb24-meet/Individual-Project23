@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link rel="stylesheet" href='static/css/home.css'/>
+</head>
+<body>
+    
+     <div class="topnav">
+        <a class="active" href="/">Introduction</a>
+        <a href="/logout">logout</a>
+
+    </div>
+    <center>
+        <h1>Welcome {{users[current_user]['full_name']}}</h1>
+        <h1>Here are all the artist you can collab with</h1>
+    </center>
+    
+    <!-- EXAMPLE -->
+    {% for i in users %}
+
+
+     <div class="user-container">
+    <div class="user-details">
+      <a href='/artist/{{i}}'><h2 class="username">{{ users[i]["username"] }}</h2></a>
+      <div class="rating">{{ users[i]['rating']}}/5</div>
+      <p class="bio">{{users[i]['bio']}}</p>
+      <div class="music-type">{{users[i]['music_type']}}</div>
+      <div class="solo/team">{{users[i]['artist']}}</div>
+      <div class="location">{{users[i]['location']}}</div>
+      <a href='/artist/{{i}}'><h2 class="Instagram">{{ users[i]["insta_link"] }}</h2></a>
+      
+
+    </div>
+    <div class="profile-pic-container">
+      <img src="{{users[i]['link']}}" alt="Profile Picture" class="profile-pic">
+    </div>
+  </div>
+
+  {% endfor %}
+
+</body>
+</html>
